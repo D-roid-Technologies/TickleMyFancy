@@ -1,12 +1,18 @@
 import React from "react";
-import Footer from "./components/footer/Footer";
+
 import Index from "../routes/Index";
+import Layout from "./components/Layout";
 
 const AppEntry: React.FC = () => {
   return (
     <>
-      <Index />
-      <Footer />
+      <Layout>
+        <Index />
+       <div>childeren</div>
+       <div>childeren</div>
+       <div>childeren</div>
+       <div>childeren</div>
+      </Layout>
     </>
   );
 };
