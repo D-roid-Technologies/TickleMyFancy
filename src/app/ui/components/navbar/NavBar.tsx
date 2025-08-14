@@ -18,8 +18,8 @@ const NavBar: React.FC<NavProps> = ({
   logoSrc,
   logoAlt = "Tickle My Fancy",
   navItems = [
-    { label: "Home", href: "#" },
-    { label: "Features", href: "#features" },
+    { label: "Home", href: "/" },
+    { label: "Features", href: " /features" },
     { label: "How it Works", href: "#how-it-works" },
     { label: "Safety", href: "#safety" },
     { label: "FAQs", href: "#faqs" },
