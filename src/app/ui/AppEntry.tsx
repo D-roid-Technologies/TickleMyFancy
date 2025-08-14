@@ -9,9 +9,6 @@ const AppEntry: React.FC = () => {
     <>
       <Layout>
         <Index />
-       <div>childeren</div>
-       <div>childeren</div>
-       <div>childeren</div>
        <SubscriptionCard/>
       </Layout>
     </>
