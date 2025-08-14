@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* Remove default body margin and set font smoothing */
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .clip-wave-top {
+    clip-path: polygon(
+      0 0, 
+      5% 2%, 
+      20% 1.5%, 
+      50% 2.5%, 
+      80% 1.5%, 
+      95% 2%, 
+      100% 0, 
+      100% 100%, 
+      0 100%
+    );
+  }
+}
