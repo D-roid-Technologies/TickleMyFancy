@@ -1,0 +1,19 @@
+
+:root {
+  /* Primary Colors */
+  --primary-500: #9333EA;
+  --primary-600: #7E22CE;
+
+  /* Coral Accent */
+  --coral-500: #FF6F61;
+  --coral-600: #E05A4D;
+
+  /* Pink Accent */
+  --pink-500: #FB00B5;
+  --pink-600: #D9009B;
+
+  /* Neutrals */
+  --white: #FFFFFF;
+  --gray-400: #676565;  /* Text color */
+  --gray-900: #1C1C28;  /* Dark background */
+}
