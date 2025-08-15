@@ -5,11 +5,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 /* Remove default body margin and set font smoothing */
-html, body {
+html,
+body {
   height: 100%;
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -19,15 +19,22 @@ html, body {
 @layer utilities {
   .clip-wave-top {
     clip-path: polygon(
-      0 0, 
-      5% 2%, 
-      20% 1.5%, 
-      50% 2.5%, 
-      80% 1.5%, 
-      95% 2%, 
-      100% 0, 
-      100% 100%, 
-      0 100%
+      0% 0%,
+      3% 0.8%,
+      8% 1.8%,
+      15% 2.8%,
+      25% 3.6%,
+      35% 4.1%,
+      45% 4.3%,
+      55% 4.2%,
+      65% 3.8%,
+      75% 3.2%,
+      85% 2.4%,
+      92% 1.5%,
+      97% 0.7%,
+      100% 0%,
+      100% 100%,
+      0% 100%
     );
   }
 }
