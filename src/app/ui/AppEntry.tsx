@@ -5,6 +5,7 @@ import Layout from "./components/Layout";
 import SubscriptionCard from "./components/Subscription/Subscription";
 import Hero from "./components/Hero";
 import HeroSection from "./components/HeroSection/HeroSection";
+import CardSection from "./components/features/CardSection";
 
 const AppEntry: React.FC = () => {
   return (
