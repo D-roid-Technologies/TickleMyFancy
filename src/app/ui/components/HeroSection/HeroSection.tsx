@@ -2,6 +2,7 @@ import hero_couple from "../../../../assets/images/hero_couple.png";
 import herogrident from "../../../../assets/images/herogrident.png";
 import jame_samuel from "../../../../assets/images/samuel_james.png";
 import stars from "../../../../assets/images/stars.png";
+import { Stamp } from "lucide-react";
 
 import { AiFillStar } from "react-icons/ai";
 export default function HeroSection() {
@@ -69,6 +70,7 @@ export default function HeroSection() {
                 <AiFillStar className="w-4 h-4 text-yellow-400" />
                 <AiFillStar className="w-4 h-4 text-yellow-400" />
                 <AiFillStar className="w-4 h-4 text-yellow-400" />
+                <Stamp className="w-4 h-4 text-yellow-400" />
               </div>
             </div>
           </div>
