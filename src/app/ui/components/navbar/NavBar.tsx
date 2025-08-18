@@ -94,7 +94,7 @@ const NavBar: React.FC<NavProps> = ({
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+        <div className="md:hidden">
             <button
               onClick={toggleMobileMenu}
               className="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition-colors duration-200"
@@ -105,7 +105,7 @@ const NavBar: React.FC<NavProps> = ({
                 <MdMenu size={24} />
               )}
             </button>
-          </div>
+          </div> 
         </div>
 
         {/* Mobile Menu */}
