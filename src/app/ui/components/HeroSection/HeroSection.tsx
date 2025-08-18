@@ -2,7 +2,10 @@ import hero_couple from "../../../../assets/images/hero_couple.png";
 import herogrident from "../../../../assets/images/herogrident.png";
 import jame_samuel from "../../../../assets/images/samuel_james.png";
 import stars from "../../../../assets/images/stars.png";
-import { Stamp } from "lucide-react";
+import ellipese1 from "../../../../assets/images/ellipese1.jpg" 
+import ellipese2 from "../../../../assets/images/ellipese2.jpg" 
+import ellipese3 from "../../../../assets/images/ellipese3.jpg" 
+import ellipese4 from "../../../../assets/images/ellipese4.jpg" 
 
 import { AiFillStar } from "react-icons/ai";
 export default function HeroSection() {
@@ -48,7 +51,7 @@ export default function HeroSection() {
           /> */}
 
           {/* Left Profile Card */}
-          <div className="absolute left-4 md:left-20 top-1/2 -translate-y-1/2 bg-white rounded-sm p-4 shadow-lg z-10 w-[280px] h-[120px]">
+          <div className="absolute left-4 md:left-20 top-[10] -translate-y-1/2 bg-white rounded-sm p-4 shadow-lg z-10 w-[300px] h-[140px]">
             <div className="flex flex-col items-center justify-center gap-1">
               <p className="font-semibold text-sm text-gray-800 pb-2">
                 Samuel James
@@ -70,7 +73,7 @@ export default function HeroSection() {
                 <AiFillStar className="w-4 h-4 text-yellow-400" />
                 <AiFillStar className="w-4 h-4 text-yellow-400" />
                 <AiFillStar className="w-4 h-4 text-yellow-400" />
-                <Stamp className="w-4 h-4 text-yellow-400" />
+                <AiFillStar className="w-4 h-4 text-yellow-400" />
               </div>
             </div>
           </div>
@@ -87,32 +90,41 @@ export default function HeroSection() {
           </div>
 
           {/* Right Profile Card */}
-          <div className="absolute right-4 md:right-20 top-1/2 -translate-y-1/2 bg-white rounded-2xl p-4 shadow-lg z-10">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-gray-300 overflow-hidden">
-                <img
-                  src="/placeholder.svg?height=48&width=48"
-                  alt="Profile"
-                  width={48}
-                  height={48}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div>
-                <p className="font-semibold text-sm text-gray-800">
-                  Join Happy People
-                </p>
-                <div className="flex items-center gap-1">
-                  <div className="flex -space-x-1">
-                    <div className="w-4 h-4 rounded-full bg-pink-400 border border-white"></div>
-                    <div className="w-4 h-4 rounded-full bg-purple-400 border border-white"></div>
-                    <div className="w-4 h-4 rounded-full bg-orange-400 border border-white"></div>
-                  </div>
-                  <span className="text-xs text-gray-500 ml-1">+2k</span>
-                </div>
-              </div>
-            </div>
-          </div>
+<div className="absolute right-5 top-[25px] bg-white rounded-md p-4 shadow-xl z-10 rotate-[-5deg] w-[210px] h-[120px] mr-[70px]">
+  <div className="flex items-center gap-3">
+    <div>
+      <p className="font-semibold text-sm text-[#FF6F6199]">
+        Join Happy People
+      </p>
+      <div className="flex items-center gap-1 mt-2">
+        <div className="flex -space-x-2">
+          <img
+            src={ellipese1}
+            alt="User 1"
+            className="w-8 h-8 rounded-full border-2 border-white object-cover"
+          />
+          <img
+            src={ellipese2}
+            alt="User 2"
+            className="w-8 h-8 rounded-full border-2 border-white object-cover"
+          />
+          <img
+            src={ellipese3}
+            alt="User 3"
+            className="w-8 h-8 rounded-full border-2 border-white object-cover"
+          />
+          <img
+            src={ellipese4}
+            alt="User 4"
+            className="w-8 h-8 rounded-full border-2 border-white object-cover"
+          />
+        </div>
+        <span className="w-7 h-7 flex items-center justify-center text-center text-sm text-[#FFFFFF] bg-[#FF6F6199] rounded-full">+2k</span>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
       </div>
     </section>
