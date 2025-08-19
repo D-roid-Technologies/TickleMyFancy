@@ -1,10 +1,9 @@
-"use client"
-
-import type React from "react"
-import { useState } from "react"
-import { Link, useLocation } from "react-router-dom"
-import logoImage from "../../../images/png/image 68.png"
-import { MdMenu, MdOutlineClose } from "react-icons/md"
+import React, { useState } from "react";
+import logoImage from "../../../images/png/image 68.png";
+import { MdMenu, MdOutlineClose } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 interface NavItem {
   label: string
@@ -28,10 +27,14 @@ const NavBar: React.FC<NavProps> = ({
     { label: "Safety", href: "/safety" },
     { label: "FAQs", href: "/faqs" },
   ],
-  onGetStarted = () => console.log("Get Started clicked"),
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate("/welcome");
+  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -45,7 +48,7 @@ const NavBar: React.FC<NavProps> = ({
   }
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-100">
+    <nav className="bg-white shadow-sm border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo Section */}
@@ -81,8 +84,8 @@ const NavBar: React.FC<NavProps> = ({
           <div className="hidden md:flex items-center">
             <button
               onClick={() => {
-                onGetStarted()
-                setIsMobileMenuOpen(false)
+                handleGetStarted();
+                setIsMobileMenuOpen(false);
               }}
               className="w-full text-white px-6 py-2 rounded-full font-medium transition-all duration-200 shadow-sm hover:shadow-md"
               style={{
@@ -131,8 +134,8 @@ const NavBar: React.FC<NavProps> = ({
               <div className="px-3 py-2">
                 <button
                   onClick={() => {
-                    onGetStarted()
-                    setIsMobileMenuOpen(false)
+                    handleGetStarted();
+                    setIsMobileMenuOpen(false);
                   }}
                   className="w-full bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full font-medium transition-colors duration-200 shadow-sm hover:shadow-md"
                 >
@@ -143,7 +146,7 @@ const NavBar: React.FC<NavProps> = ({
           </div>
         )}
       </div>
-    </header>
-  )
-}
-export default NavBar
+    </nav>
+  );
+};
+export default NavBar;
