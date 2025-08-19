@@ -2,6 +2,8 @@ import React from "react";
 import logoImage from "../../images/png/coupleImage.png";
 import CardSection from "./features/CardSection";
 import FeaturesCtaSection from "./features/FeatureCtaSection";
+import { Subscript } from "lucide-react";
+import SubscriptionCard from "./Subscription/Subscription";
 
 const Hero: React.FC = () => {
   return (
@@ -46,6 +48,9 @@ const Hero: React.FC = () => {
       <CardSection />
       <div>
         <FeaturesCtaSection />
+      </div>
+      <div>
+        <SubscriptionCard />
       </div>
     </div>
   );

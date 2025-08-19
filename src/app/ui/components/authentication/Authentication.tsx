@@ -59,11 +59,12 @@ const Authentication: React.FC<AuthProps> = ({
       );
     case "forgot-password":
       return (
-        <ForgotPassword
-          onNavigate={handleNavigate}
-          email={formData.email}
-          onEmailChange={(email: string) => onFormDataChange("email", email)}
-        />
+        <p>forgot password</p>
+        // <ForgotPassword
+        //   onNavigate={handleNavigate}
+        //   email={formData.email}
+        //   onEmailChange={(email: string) => onFormDataChange("email", email)}
+        // />
       );
     case "verification":
       return <Verification onNavigate={handleNavigate} />;
