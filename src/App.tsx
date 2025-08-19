@@ -6,9 +6,9 @@ import "./index.css";
 import HomePage from "./app/ui/pages/home/Home";
 import FAQsPage from "./app/ui/pages/FAQ/FAQsPage";
 import SafetyPage from "./app/ui/pages/SafetyPage/SafetyPage";
-import HowItWorksPage from "./app/ui/pages/howitworks/HowItWorksPage";
-import FeaturesPage from "./app/ui/pages/features/FeaturesPage";
 import Welcome from "./app/ui/components/authentication/Welcome";
+import FeaturesPage from "./app/ui/pages/Features/FeaturesPage";
+import HowItWorksPage from "./app/ui/pages/HowItWorks/HowItWorksPage";
 
 function App() {
   return (
@@ -18,8 +18,8 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/features" element={<FeaturesPage />} />
-            <Route path="/how-it-works" element={<HowItWorksPage />} />
+            <Route path="/features" element={<FeaturesPage/>} />
+            <Route path="/how-it-works" element={<HowItWorksPage/>} />
             <Route path="/safety" element={<SafetyPage />} />
             <Route path="/faqs" element={<FAQsPage />} />
             <Route
