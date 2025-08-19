@@ -37,4 +37,18 @@ body {
       0% 100%
     );
   }
+    .clip-left-panel {
+    border-radius: 2rem 0 0 2rem; /* top-right 0, bottom-left 2rem */
+    overflow: hidden;
+  }
+
+  /* Right panel: skewed polygon */
+  .clip-right-panel {
+    clip-path: polygon(6% 3%, 100% 0%, 94% 100%, 0% 96%);
+    -webkit-clip-path: polygon(6% 3%, 100% 0%, 94% 100%, 0% 96%);
+  }
+
+  
 }
+
+
