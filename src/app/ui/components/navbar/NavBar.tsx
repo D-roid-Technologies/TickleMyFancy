@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logoImage from "../../../images/png/image 68.png";
 import { MdMenu, MdOutlineClose } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 interface NavItem {
   label: string;
@@ -24,9 +25,13 @@ const NavBar: React.FC<NavProps> = ({
     { label: "Safety", href: "#safety" },
     { label: "FAQs", href: "#faqs" },
   ],
-  onGetStarted = () => console.log("Get Started clicked"),
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate("/welcome");
+  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -73,7 +78,7 @@ const NavBar: React.FC<NavProps> = ({
           <div className="hidden md:flex items-center">
             <button
               onClick={() => {
-                onGetStarted();
+                handleGetStarted();
                 setIsMobileMenuOpen(false);
               }}
               className="w-full text-white px-6 py-2 rounded-full font-medium transition-all duration-200 shadow-sm hover:shadow-md"
@@ -125,7 +130,7 @@ const NavBar: React.FC<NavProps> = ({
               <div className="px-3 py-2">
                 <button
                   onClick={() => {
-                    onGetStarted();
+                    handleGetStarted();
                     setIsMobileMenuOpen(false);
                   }}
                   className="w-full bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full font-medium transition-colors duration-200 shadow-sm hover:shadow-md"
