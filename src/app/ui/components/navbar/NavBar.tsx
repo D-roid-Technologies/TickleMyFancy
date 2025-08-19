@@ -6,15 +6,15 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 interface NavItem {
-  label: string
-  href: string
+  label: string;
+  href: string;
 }
 
 interface NavProps {
-  logoSrc?: string
-  logoAlt?: string
-  navItems?: NavItem[]
-  onGetStarted?: () => void
+  logoSrc?: string;
+  logoAlt?: string;
+  navItems?: NavItem[];
+  onGetStarted?: () => void;
 }
 
 const NavBar: React.FC<NavProps> = ({
@@ -28,24 +28,24 @@ const NavBar: React.FC<NavProps> = ({
     { label: "FAQs", href: "/faqs" },
   ],
 }) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const location = useLocation()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate("/welcome");
+    navigate("/welcome-to-get-started");
   };
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   const isActiveRoute = (href: string) => {
     if (href === "/") {
-      return location.pathname === "/"
+      return location.pathname === "/";
     }
-    return location.pathname === href
-  }
+    return location.pathname === href;
+  };
 
   return (
     <nav className="bg-white shadow-sm border-b border-gray-100">
@@ -55,11 +55,19 @@ const NavBar: React.FC<NavProps> = ({
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               {logoImage ? (
-                <img src={logoImage || "/placeholder.svg"} alt={logoAlt} className="h-12 w-auto text-xl" />
+                <img
+                  src={logoImage || "/placeholder.svg"}
+                  alt={logoAlt}
+                  className="h-12 w-auto text-xl"
+                />
               ) : (
                 <div className="flex items-center">
-                  <span className="text-xl font-bold text-gray-800">TICKLE MY</span>
-                  <span className="text-xl font-bold text-pink-500 ml-1 italic">Fancy</span>
+                  <span className="text-xl font-bold text-gray-800">
+                    TICKLE MY
+                  </span>
+                  <span className="text-xl font-bold text-pink-500 ml-1 italic">
+                    Fancy
+                  </span>
                 </div>
               )}
             </Link>
@@ -72,7 +80,9 @@ const NavBar: React.FC<NavProps> = ({
                 key={index}
                 to={item.href}
                 className={`transition-colors duration-200 font-medium ${
-                  isActiveRoute(item.href) ? "text-purple-600 font-semibold" : "text-gray-600 hover:text-gray-900"
+                  isActiveRoute(item.href)
+                    ? "text-purple-600 font-semibold"
+                    : "text-gray-600 hover:text-gray-900"
                 }`}
               >
                 {item.label}
@@ -92,10 +102,12 @@ const NavBar: React.FC<NavProps> = ({
                 background: "linear-gradient(to right, #9333EA, #FF6F61)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "linear-gradient(to right, #7e22ce, #ef4444)"
+                e.currentTarget.style.background =
+                  "linear-gradient(to right, #7e22ce, #ef4444)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "linear-gradient(to right, #9333EA, #FF6F61)"
+                e.currentTarget.style.background =
+                  "linear-gradient(to right, #9333EA, #FF6F61)";
               }}
             >
               Get Started
@@ -108,7 +120,11 @@ const NavBar: React.FC<NavProps> = ({
               onClick={toggleMobileMenu}
               className="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition-colors duration-200"
             >
-              {isMobileMenuOpen ? <MdOutlineClose size={24} /> : <MdMenu size={24} />}
+              {isMobileMenuOpen ? (
+                <MdOutlineClose size={24} />
+              ) : (
+                <MdMenu size={24} />
+              )}
             </button>
           </div>
         </div>
