@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logoImage from "../../../images/png/image 68.png";
 import { MdMenu, MdOutlineClose } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 interface NavItem {
   label: string;
@@ -18,22 +19,26 @@ const NavBar: React.FC<NavProps> = ({
   logoSrc,
   logoAlt = "Tickle My Fancy",
   navItems = [
-    { label: "Home", href: "#" },
-    { label: "Features", href: "#features" },
+    { label: "Home", href: "/" },
+    { label: "Features", href: " /features" },
     { label: "How it Works", href: "#how-it-works" },
     { label: "Safety", href: "#safety" },
     { label: "FAQs", href: "#faqs" },
   ],
-  onGetStarted = () => console.log("Get Started clicked"),
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate("/welcome");
+  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-100">
+    <nav className="bg-white shadow-sm border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo Section */}
@@ -73,7 +78,7 @@ const NavBar: React.FC<NavProps> = ({
           <div className="hidden md:flex items-center">
             <button
               onClick={() => {
-                onGetStarted();
+                handleGetStarted();
                 setIsMobileMenuOpen(false);
               }}
               className="w-full text-white px-6 py-2 rounded-full font-medium transition-all duration-200 shadow-sm hover:shadow-md"
@@ -94,7 +99,7 @@ const NavBar: React.FC<NavProps> = ({
           </div>
 
           {/* Mobile Menu Button */}
-        <div className="md:hidden">
+          <div className="md:hidden">
             <button
               onClick={toggleMobileMenu}
               className="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition-colors duration-200"
@@ -105,7 +110,7 @@ const NavBar: React.FC<NavProps> = ({
                 <MdMenu size={24} />
               )}
             </button>
-          </div> 
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -125,7 +130,7 @@ const NavBar: React.FC<NavProps> = ({
               <div className="px-3 py-2">
                 <button
                   onClick={() => {
-                    onGetStarted();
+                    handleGetStarted();
                     setIsMobileMenuOpen(false);
                   }}
                   className="w-full bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full font-medium transition-colors duration-200 shadow-sm hover:shadow-md"
@@ -137,7 +142,7 @@ const NavBar: React.FC<NavProps> = ({
           </div>
         )}
       </div>
-    </header>
+    </nav>
   );
 };
 export default NavBar;
