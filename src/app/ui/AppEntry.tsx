@@ -8,6 +8,8 @@ import WhatWeDoSection from "./components/whatWeDo/what-we-do-section";
 import FeaturesSection from "./components/features/features-section";
 import HowItWorksSection from "./components/how-it-works/how-it-works-section";
 import Usersafety from "./components/usersafety/Usersafety";
+import ChooseYourVibe from "./components/ChooseYourVibe/ChooseYourVibe";
+import TestimonialCarousel from "./components/Testimonial/TestimonialCarousel";
 
 const AppEntry: React.FC = () => {
   return (
@@ -19,6 +21,8 @@ const AppEntry: React.FC = () => {
         <FeaturesSection/>
         <HowItWorksSection/>
         <Usersafety/>
+        <ChooseYourVibe/>
+        <TestimonialCarousel/>
        <SubscriptionCard/>
       </Layout>
     </>

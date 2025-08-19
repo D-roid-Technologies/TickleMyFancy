@@ -1,9 +1,11 @@
 import React from "react";
+import HeroSection from "../../components/HeroSection/HeroSection";
 
 const Home: React.FC = () => {
   return (
     <>
-      <div className="bg-amber-600">Hello</div>
+      <HeroSection/>
+      
     </>
   );
 };
