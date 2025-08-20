@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Welcome from "./Welcome";
+import SignUp from "./SignUp";
 
 type AuthScreen =
   | "welcome"
@@ -26,7 +28,32 @@ const Authentication: React.FC<AuthenticationProps> = ({
   formData,
   onFormDataChange,
 }) => {
+  const location = useLocation();
   const [currentScreen, setCurrentScreen] = useState<AuthScreen>("welcome");
+
+  // Map URL paths to screen types
+  const getScreenFromPath = (pathname: string): AuthScreen => {
+    switch (pathname) {
+      case "/welcome-to-get-started":
+        return "welcome";
+      case "/signup":
+        return "signup";
+      case "/signin":
+        return "signin";
+      case "/forgot-password":
+        return "forgot-password";
+      case "/verification":
+        return "verification";
+      default:
+        return "welcome";
+    }
+  };
+
+  // Update currentScreen when route changes
+  useEffect(() => {
+    const screen = getScreenFromPath(location.pathname);
+    setCurrentScreen(screen);
+  }, [location.pathname]);
 
   // Use external onNavigate if provided, otherwise use internal state
   const handleNavigate = (screen: AuthScreen) => {
@@ -44,22 +71,65 @@ const Authentication: React.FC<AuthenticationProps> = ({
         return <Welcome onNavigate={handleNavigate} />;
       case "signup":
         return (
-          <div>
-            Signup Component
-            {/* Pass formData and onFormDataChange to your signup component when you create it */}
-          </div>
+          <SignUp />
+          //   <div className="min-h-screen flex items-center justify-center p-4">
+          //     <div className="w-full max-w-md">
+          //       <h1 className="text-3xl font-bold text-center mb-8">Sign Up</h1>
+          //       <div className="bg-white p-8 rounded-lg shadow-lg">
+          //         <p>Signup Component - Replace with your actual signup form</p>
+          //         <button
+          //           onClick={() => handleNavigate("signin")}
+          //           className="mt-4 text-purple-600 underline"
+          //         >
+          //           Already have an account? Sign in
+          //         </button>
+          //       </div>
+          //     </div>
+          //   </div>
         );
       case "signin":
         return (
-          <div>
-            Signin Component
-            {/* Pass formData and onFormDataChange to your signin component when you create it */}
+          <div className="min-h-screen flex items-center justify-center p-4">
+            <div className="w-full max-w-md">
+              <h1 className="text-3xl font-bold text-center mb-8">Sign In</h1>
+              <div className="bg-white p-8 rounded-lg shadow-lg">
+                <p>Signin Component - Replace with your actual signin form</p>
+                <button
+                  onClick={() => handleNavigate("signup")}
+                  className="mt-4 text-purple-600 underline"
+                >
+                  Don't have an account? Sign up
+                </button>
+              </div>
+            </div>
           </div>
         );
       case "forgot-password":
-        return <div>Forgot Password Component</div>;
+        return (
+          <div className="min-h-screen flex items-center justify-center p-4">
+            <div className="w-full max-w-md">
+              <h1 className="text-3xl font-bold text-center mb-8">
+                Reset Password
+              </h1>
+              <div className="bg-white p-8 rounded-lg shadow-lg">
+                <p>Forgot Password Component</p>
+              </div>
+            </div>
+          </div>
+        );
       case "verification":
-        return <div>Verification Component</div>;
+        return (
+          <div className="min-h-screen flex items-center justify-center p-4">
+            <div className="w-full max-w-md">
+              <h1 className="text-3xl font-bold text-center mb-8">
+                Verify Account
+              </h1>
+              <div className="bg-white p-8 rounded-lg shadow-lg">
+                <p>Verification Component</p>
+              </div>
+            </div>
+          </div>
+        );
       default:
         return <Welcome onNavigate={handleNavigate} />;
     }
@@ -67,46 +137,4 @@ const Authentication: React.FC<AuthenticationProps> = ({
 
   return <div className="App">{renderCurrentScreen()}</div>;
 };
-
 export default Authentication;
-
-// import React, { useState } from "react";
-// import Welcome from "./Welcome";
-
-// type AuthScreen =
-//   | "welcome"
-//   | "signup"
-//   | "signin"
-//   | "forgot-password"
-//   | "verification";
-
-// const Authentication: React.FC = () => {
-//   const [currentScreen, setCurrentScreen] = useState<AuthScreen>("welcome");
-
-//   // This is the function that was likely missing or broken
-//   const handleNavigate = (screen: AuthScreen) => {
-//     console.log("Navigating to:", screen); // Add for debugging
-//     setCurrentScreen(screen);
-//   };
-
-//   const renderCurrentScreen = () => {
-//     switch (currentScreen) {
-//       case "welcome":
-//         return <Welcome onNavigate={handleNavigate} />;
-//       case "signup":
-//         return <div>Signup Component</div>; // Replace with actual component
-//       case "signin":
-//         return <div>Signin Component</div>; // Replace with actual component
-//       case "forgot-password":
-//         return <div>Forgot Password Component</div>; // Replace with actual component
-//       case "verification":
-//         return <div>Verification Component</div>; // Replace with actual component
-//       default:
-//         return <Welcome onNavigate={handleNavigate} />;
-//     }
-//   };
-
-//   return <div className="App">{renderCurrentScreen()}</div>;
-// };
-
-// export default Authentication;

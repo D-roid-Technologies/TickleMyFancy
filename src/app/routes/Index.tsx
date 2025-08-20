@@ -7,8 +7,10 @@ import Welcome from "../ui/components/authentication/Welcome";
 import SafetyPage from "../ui/pages/SafetyPage/SafetyPage";
 import FAQsPage from "../ui/pages/FAQ/FAQsPage";
 import Authentication from "../ui/components/authentication/Authentication";
-import HowItWorksPage from "../ui/pages/HowItWorks/HowItWorksPage";
-import FeaturesPage from "../ui/pages/Features/FeaturesPage";
+import FeaturesPage from "../ui/pages/features/FeaturesPage";
+import HowItWorksPage from "../ui/pages/howitworks/HowItWorksPage";
+// import HowItWorksPage from "../ui/pages/HowItWorks/HowItWorksPage";
+// import FeaturesPage from "../ui/pages/Features/FeaturesPage";
 
 type AuthScreen =
   | "welcome"
@@ -91,8 +93,8 @@ const Index: React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/features" element={<FeaturesPage/>} />
-      <Route path="/how-it-works" element={<HowItWorksPage/>} />
+      <Route path="/features" element={<FeaturesPage />} />
+      <Route path="/how-it-works" element={<HowItWorksPage />} />
       <Route path="/safety" element={<SafetyPage />} />
       <Route path="/faqs" element={<FAQsPage />} />
       <Route path="/about" element={<About />} />
