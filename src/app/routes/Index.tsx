@@ -3,11 +3,14 @@ import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Home from "../ui/pages/home/Home";
 import About from "../ui/pages/about/About";
 import Welcome from "../ui/components/authentication/Welcome";
-import FeaturesPage from "../ui/pages/features/FeaturesPage";
-import HowItWorksPage from "../ui/pages/howitworks/HowItWorksPage";
+
 import SafetyPage from "../ui/pages/SafetyPage/SafetyPage";
 import FAQsPage from "../ui/pages/FAQ/FAQsPage";
 import Authentication from "../ui/components/authentication/Authentication";
+import FeaturesPage from "../ui/pages/features/FeaturesPage";
+import HowItWorksPage from "../ui/pages/howitworks/HowItWorksPage";
+// import HowItWorksPage from "../ui/pages/HowItWorks/HowItWorksPage";
+// import FeaturesPage from "../ui/pages/Features/FeaturesPage";
 
 type AuthScreen =
   | "welcome"
