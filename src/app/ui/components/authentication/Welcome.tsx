@@ -61,7 +61,6 @@ const Welcome: React.FC<{
                 className="h-64 w-auto object-contain rounded-lg"
                 onError={(e) => {
                   console.error("Image failed to load:", e);
-                  // Optionally hide the image or show a placeholder
                 }}
               />
             </div>
