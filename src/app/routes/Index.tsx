@@ -7,10 +7,8 @@ import Welcome from "../ui/components/authentication/Welcome";
 import SafetyPage from "../ui/pages/SafetyPage/SafetyPage";
 import FAQsPage from "../ui/pages/FAQ/FAQsPage";
 import Authentication from "../ui/components/authentication/Authentication";
-import FeaturesPage from "../ui/pages/features/FeaturesPage";
-import HowItWorksPage from "../ui/pages/howitworks/HowItWorksPage";
-// import HowItWorksPage from "../ui/pages/HowItWorks/HowItWorksPage";
-// import FeaturesPage from "../ui/pages/Features/FeaturesPage";
+import FeaturesPage from "../ui/pages/Features/FeaturesPage";
+import HowItWorksPage from "../ui/pages/HowItWorks/HowItWorksPage";
 
 type AuthScreen =
   | "welcome"
