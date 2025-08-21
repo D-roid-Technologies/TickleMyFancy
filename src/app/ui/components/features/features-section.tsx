@@ -26,13 +26,13 @@ export default function FeaturesSection() {
             ></div>
 
             {/* Second Image hidden on mobile */}
-            <div className="hidden sm:block absolute w-[180px] lg:w-[240px] h-[140px] lg:h-[180px] rounded-2xl overflow-hidden shadow-lg bottom-0 right-0 rotate-3">
+            {/* <div className="hidden sm:block absolute w-[180px] lg:w-[240px] h-[140px] lg:h-[180px] rounded-2xl overflow-hidden shadow-lg bottom-0 right-0 rotate-3">
               <img
                 src={whatwedo2}
                 alt="Couple 2"
                 className="w-full h-full object-cover"
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Content Section */}
