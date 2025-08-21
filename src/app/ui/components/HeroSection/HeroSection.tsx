@@ -115,7 +115,7 @@ export default function HeroSection() {
 
         {/* Create Account Button */}
         <div className="mt-12 flex justify-center sm:hidden">
-          <button className="linear-gradient(to right, #9333EA, #FF6F61 text-white px-10 py-3 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+          <button className="bg-purple-600 hover:bg-purple-700 text-white px-10 py-3 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
             Create Account
           </button>
         </div>
