@@ -31,7 +31,7 @@ const WelcomeWrapper: React.FC = () => {
   // Function to handle navigation from Welcome page
   const handleWelcomeNavigate = (screen: AuthScreen) => {
     const routeMap: Record<AuthScreen, string> = {
-      welcome: "/welcome-to-get-startede",
+      welcome: "/welcome-to-get-started",
       signup: "/signup",
       signin: "/signin",
       "forgot-password": "/forgot-password",

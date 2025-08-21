@@ -53,24 +53,22 @@ const NavBar: React.FC<NavProps> = ({
         <div className="flex justify-between items-center h-16">
           {/* Logo Section */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
-              {logoImage ? (
-                <img
-                  src={logoImage || "/placeholder.svg"}
-                  alt={logoAlt}
-                  className="h-12 w-auto text-xl"
-                />
-              ) : (
-                <div className="flex items-center">
-                  <span className="text-xl font-bold text-gray-800">
-                    TICKLE MY
-                  </span>
-                  <span className="text-xl font-bold text-pink-500 ml-1 italic">
-                    Fancy
-                  </span>
-                </div>
-              )}
-            </Link>
+            {logoImage ? (
+              <img
+                src={logoImage || "/placeholder.svg"}
+                alt={logoAlt}
+                className="h-12 w-auto text-xl"
+              />
+            ) : (
+              <div className="flex items-center">
+                <span className="text-xl font-bold text-gray-800">
+                  TICKLE MY
+                </span>
+                <span className="text-xl font-bold text-pink-500 ml-1 italic">
+                  Fancy
+                </span>
+              </div>
+            )}
           </div>
 
           {/* Desktop Navigation */}

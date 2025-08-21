@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
               className="w-[122px] h-[70px]"
               src={Trackle_footer_img}
               alt="Tickle My Fancy"
-            />{" "}
+            />
           </h2>
           <p className="mt-4 text-[#000000] w-[325px]">
             We’re building more than just matches. We’re creating a safe space
@@ -28,6 +28,19 @@ const Footer: React.FC = () => {
             <button className="bg-[#FB00B5] text-white px-5  rounded-r-2xl hover:bg-[#FB00B5]">
               Subscribe
             </button>
+          </div>
+          <div className="mt-3">
+            <p>
+              Build by &nbsp;
+              <a
+                href="https://droidtechhq.com/"
+                target="blank"
+                className="text-[#FB00B5]"
+              >
+                D'roid Technologies
+              </a>
+              &nbsp; with ❤️
+            </p>
           </div>
         </div>
 
@@ -99,7 +112,7 @@ const Footer: React.FC = () => {
 
       <div className="bg-red-400 text-center py-4">
         <p className="text-white text-sm">
-          © 2025 [Your Product Name]. All rights reserved.
+          © 2025 Tickle My Fancy. All rights reserved.
         </p>
       </div>
     </footer>
